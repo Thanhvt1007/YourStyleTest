@@ -7,11 +7,11 @@ public class ReadConfig {
     static String localDir = System.getProperty("user.dir");
     static Properties properties = new Properties();
 
+
     public static Properties loadPropertices() {
         try {
             FileInputStream inputStream = new FileInputStream(localDir + "/src/main/resources/config/properties");
             properties.load(inputStream);
-
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -19,14 +19,8 @@ public class ReadConfig {
     }
 
     public static String getProperty(String key) {
-        return properties.getProperty(key);
+        return loadPropertices().getProperty(key);
     }
-    public static String getBrowser() {
-        String browser = properties.getProperty("browser");
-        if (browser == null || browser.isEmpty()) {
-            return "chrome";
-        }
-        return browser;
-    }
+
 
 }
