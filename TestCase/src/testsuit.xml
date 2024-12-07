@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Test Suite for Register Function">
+    <!-- Mô tả của suite -->
+    <test name="Register Test">
+        <!-- Chạy class RegisterTest -->
+        <classes>
+            <class name="test.RegisterTest"/>
+        </classes>
+    </test>
+</suite>
